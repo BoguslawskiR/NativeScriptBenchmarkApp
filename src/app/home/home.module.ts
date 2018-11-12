@@ -7,7 +7,6 @@ import { NavigationComponent } from "./navigation/navigation.component";
 import { RenderingComponent } from "./rendering/rendering.component";
 import { PixelComponent } from "./rendering/pixel/pixel.component";
 import { ComputingComponent } from "./computing/computing.component";
-import { AnimatableComponent } from "./animation/AnimatableElement/animatable-element.component";
 import { AnimationComponent } from "./animation/animation.component";
 
 @NgModule({
@@ -21,7 +20,6 @@ import { AnimationComponent } from "./animation/animation.component";
         RenderingComponent,
         PixelComponent,
         ComputingComponent,
-        AnimatableComponent,
         AnimationComponent
     ],
     schemas: [
