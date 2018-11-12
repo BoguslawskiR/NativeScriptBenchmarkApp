@@ -1,0 +1,11 @@
+<ActionBar class="action-bar" title="Rendering Benchmark">
+  <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" (tap)="onBackTap()"></NavigationButton>
+</ActionBar>
+<AbsoluteLayout>
+  <Button [class.btn-primary]='!buttonIndicator' top='0' left='0' style="width: 200px; height: 96px;" text="RENDER"
+    (tap)="renderElements()"></Button>
+  <WrapLayout width='100%' orientation='horizontal' *ngIf="renderIndicator" top='0' left='0' backgroundColor="red"
+    flexGrow="1">
+    <Pixel *ngFor="let i of sourceElements"></Pixel>
+  </WrapLayout>
+</AbsoluteLayout>

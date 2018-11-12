@@ -1,0 +1,12 @@
+<ActionBar class="action-bar" title="Computing Benchmark">
+  <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" (tap)="onBackTap()"></NavigationButton>
+</ActionBar>
+
+<StackLayout class="page">
+  <Label text="Result: {{transponingResult}} ms"></Label>
+  <Button class='btn-primary' text="Transpon Matrix (1000x1000)" (tap)="_transponMatrix()"></Button>
+  <Label text="Result: {{sortingResult}} ms"></Label>
+  <Button class='btn-primary' text="Sort values in 1000000 elements array" (tap)="onSortValues()"></Button>
+  <Label text="Result: {{filteringResult}} ms"></Label>
+  <Button class='btn-primary' text="Filter values in 1000000 elements array" (tap)="onFilterValues()"></Button>
+</StackLayout>
