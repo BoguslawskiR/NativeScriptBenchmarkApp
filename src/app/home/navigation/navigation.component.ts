@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, AfterViewInit } from "@angular/core";
 import { RouterExtensions } from "nativescript-angular/router";
 import { ActivatedRoute } from "@angular/router";
 
@@ -7,13 +7,12 @@ import { ActivatedRoute } from "@angular/router";
   moduleId: module.id,
   templateUrl: "./navigation.component.html"
 })
-export class NavigationComponent implements OnInit {
+export class NavigationComponent implements AfterViewInit {
 
   result: number = 0;
-
   constructor(private routerExtensions: RouterExtensions, private route: ActivatedRoute) { }
 
-  ngOnInit(): void {
+  ngAfterViewInit(): void {
     this.route.queryParams.subscribe((params) => {
       this.result = new Date().getTime() - params.startTime
     })
